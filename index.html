@@ -38,13 +38,13 @@
         // head.appendChild(script);
         $(document).ready(function () {
             //$('#appleImgB').attr('src', serveiceSite +'/Qr/Apple');
-            $("#android-download").attr("href", android_url);
-				$("#ios-download").attr("href", ios_url.replace("{{}}",window.location.origin));
-				$( document ).ready(function() {
-					if (isWeChat()){
-						$("#full-screen-wrapper").show();
-					}
-				})
+            $("#down").click(function () {
+                if (isSafari || isChrome || isCriOS) {
+                    window.location = "itms-services://?action=download-manifest&url={{}}/hecbet.plist";
+                } else {
+                    window.location = "itms-services://?action=download-manifest&url={{}}/hecbet.plist";
+                }
+            });
 
             $("#ios-download").click(function (event) {
                 if (isSafari || isChrome || isCriOS) {
