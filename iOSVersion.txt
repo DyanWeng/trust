@@ -1,0 +1,12 @@
+[
+	{
+		"packageName":"androidPackName1"
+		,"lastestVersion":"lastestVersion1"
+		,"url":"http://www.google.com"
+	}
+	,{
+		"packageName":"androidPackName2"
+		,"lastestVersion":"lastestVersion1"
+		,"url":"http://www.google.com"
+	}
+]

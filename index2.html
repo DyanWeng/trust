@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<!--
+	Fractal by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>JX</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+
+		<script type="text/javascript">
+			function getMobileOperatingSystem() {
+			  	var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+			  	if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) )
+			  	{
+			    	return 'iOS';
+
+			  	}else if( userAgent.match( /Android/i ) ){
+					return 'Android';
+			  	}else{
+			    	return 'unknown';
+			  	}
+			}
+
+			var device = getMobileOperatingSystem();
+			if('iOS'==device){
+				window.location.href='ios.html';
+			}else if('Android'==device){
+				window.location.href='android.html';
+			}
+
+		</script>
+
+	</head>
+	<body id="top">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="content">
+					<!-- <h1><a href="#">Fractal</a></h1> -->
+					<p>JX App 下载</p>
+					<ul class="actions">
+						<li>
+							<div class="image">
+								<img src="images/common.png" class="qrcode" alt="" />
+								<br/>
+								<!-- <a href="https://www.pgyer.com/L2Rk?sig=W0fIkpCRagiArq%2FT1PpebxSeStMPFa7rg7qtfJ2FcWrGlUKybLmXBLmuza106clo" class="button special icon fa-download" style="margin-left: auto;margin-right: auto;" id="android-download">Android下载</a> -->
+							</div>
+						</li>
+						<!-- <li>
+							<div class="image">
+								<img src="images/ios.png" class="qrcode" alt="" />
+								<br/>
+								<a href="https://dashboard.applivery.com/hecbet-ios" class="button special icon fa-download" id="ios-download">iOS下载　　</a>
+							</div>
+						</li> -->
+						<!-- <li><a href="#one" class="button icon fa-chevron-down scrolly">Learn More</a></li> -->
+					</ul>
+				</div>
+				<!-- <div class="image phone"><div class="inner"><img src="images/screen.jpg" alt="" /></div></div> -->
+			</header>
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script src="config.js"></script>
+			<script>
+				$("#android-download").attr("href", android_url);
+				$("#ios-download").attr("href", ios_url);
+			</script>
+	</body>
+</html>
